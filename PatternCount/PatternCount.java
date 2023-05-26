@@ -1,12 +1,24 @@
 package PatternCount;
 
+import java.util.Scanner;
+
 public class PatternCount {
     public static void main (String[] args) {
-        String text = "aaaaaa";
-        String pattern = "aa";
+        Scanner scanner = new Scanner (System.in);
+
+        System.out.print("Masukkan Input: ");
+        String text = scanner.nextLine();
+
+        System.out.print("Masukkan Pattern Count: ");
+        String pattern = scanner.nextLine();
+
+        // String text = "aaaaaa";
+        // String pattern = "aa";
 
         int count = pattern_counting (text, pattern);
         System.out.println("Pattern count: " + count);
+
+        scanner.close();
     }
 
     public static int pattern_counting (String text, String pattern) {
